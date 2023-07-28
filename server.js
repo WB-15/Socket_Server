@@ -25,6 +25,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
+
 app.post("/emit", (req, res) => {
   console.log(req.body);
   let lang = req.body.language;
